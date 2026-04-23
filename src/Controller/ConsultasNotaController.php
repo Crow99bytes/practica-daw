@@ -8,8 +8,29 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Controlador encargado de realizar consultas sobre las notas.
+ *
+ * Esta clase permite ejecutar distintas búsquedas sobre la entidad Nota
+ * utilizando su repositorio. Los resultados obtenidos se envían a una
+ * vista Twig para su representación.
+ *
+ * @package App\Controller
+ * @author Manuel
+ * @version 1.0
+ */
 class ConsultasNotaController extends AbstractController
 {
+    /**
+     * Muestra la página principal de consultas de notas.
+     *
+     * Este método realiza varias operaciones de consulta sobre la entidad Nota
+     * y muestra todos los resultados se pasan a la plantilla.
+     *
+     * @param NotaRepository $notaRepository Repositorio utilizado para consultar las notas.
+     *
+     * @return Response Devuelve la respuesta HTTP con la vista renderizada.
+     */
     #[Route('/consultas/notas', name: 'consultas_notas')]
     public function index(NotaRepository $notaRepository): Response
     {

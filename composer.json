@@ -11,6 +11,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.7",
         "doctrine/orm": "^3.6",
         "phpdocumentor/reflection-docblock": "^6.0",
+        "phpdocumentor/shim": "*",
         "phpstan/phpdoc-parser": "^2.3",
         "symfony/asset": "7.4.*",
         "symfony/asset-mapper": "7.4.*",
@@ -48,6 +49,7 @@
     "config": {
         "allow-plugins": {
             "php-http/discovery": true,
+            "phpdocumentor/shim": true,
             "symfony/flex": true,
             "symfony/runtime": true
         },
